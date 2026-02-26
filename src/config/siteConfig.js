@@ -1,4 +1,4 @@
-/**
+u/**
  * ============================================================
  *  SITE CONFIGURATION — Single source of truth
  *  Replace all placeholder values with your own information.
@@ -9,7 +9,7 @@ const siteConfig = {
     /* ---- Personal ---- */
     personal: {
         name: "Mohammad Irtiza Rahmani",
-        title: "FULL STACK DEVELOPER",
+        title: "nalla developer",
         tagline: "Building elegant solutions to complex problems.",
         email: "irtizarahmani5@gmail.com",
         resumeUrl: "#", // link to your resume PDF
