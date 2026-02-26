@@ -1,0 +1,131 @@
+/* ============================================================
+   Contact Section
+   ============================================================ */
+.contact {
+    background: var(--bg-secondary);
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Info side */
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact__info-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact__info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.contact__info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 12px;
+    background: var(--accent-light);
+    color: var(--accent);
+}
+
+.contact__info-card h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.15rem;
+}
+
+.contact__info-card a,
+.contact__info-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.contact__info-card a:hover {
+    color: var(--accent);
+}
+
+/* Form side */
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.contact__field label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.contact__field input,
+.contact__field textarea {
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.contact__input--error {
+    border-color: #f44 !important;
+}
+
+.contact__error {
+    font-size: 0.78rem;
+    color: #f44;
+    font-weight: 500;
+}
+
+.contact__success {
+    margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(72, 199, 142, 0.12);
+    color: #48c78e;
+    font-weight: 600;
+    font-size: 0.9rem;
+    animation: fadeInUp 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .contact__grid {
+        grid-template-columns: 1fr;
+    }
+}

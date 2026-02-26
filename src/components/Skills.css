@@ -1,0 +1,52 @@
+/* ============================================================
+   Skills Section
+   ============================================================ */
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.skills__category {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills__category:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.skills__category-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skills__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skills__badge {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: var(--skill-bg);
+    color: var(--skill-text);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills__badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+}

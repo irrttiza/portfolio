@@ -1,0 +1,149 @@
+/* ============================================================
+   Theme Variables + Global Layout
+   ============================================================ */
+
+/* ---- Light theme (default) ---- */
+:root,
+[data-theme="light"] {
+  --bg: #f8f9fc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555770;
+  --accent: #6c63ff;
+  --accent-hover: #5a52e0;
+  --accent-light: rgba(108, 99, 255, 0.12);
+  --border: #e2e4ea;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
+  --gradient: linear-gradient(135deg, #6c63ff 0%, #e942f5 100%);
+  --nav-bg: rgba(248, 249, 252, 0.85);
+  --code-bg: #f0f0f5;
+  --skill-bg: #f0eeff;
+  --skill-text: #5a52e0;
+}
+
+/* ---- Dark theme ---- */
+[data-theme="dark"] {
+  --bg: #0f0f1a;
+  --bg-secondary: #1a1a2e;
+  --bg-card: #1e1e35;
+  --text: #e8e8f0;
+  --text-secondary: #a0a0b8;
+  --accent: #7c74ff;
+  --accent-hover: #9b95ff;
+  --accent-light: rgba(124, 116, 255, 0.15);
+  --border: #2a2a45;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --gradient: linear-gradient(135deg, #7c74ff 0%, #e942f5 100%);
+  --nav-bg: rgba(15, 15, 26, 0.9);
+  --code-bg: #252540;
+  --skill-bg: rgba(124, 116, 255, 0.12);
+  --skill-text: #9b95ff;
+}
+
+/* ---- Utility container ---- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- Section shared styles ---- */
+.section {
+  padding: 6rem 0;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section__subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  max-width: 560px;
+}
+
+/* ---- Button styles ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.35);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn--outline:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Ripple effect */
+.btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: ripple-anim 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-anim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ---- App wrapper ---- */
+#app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app-wrapper>main {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section__title {
+    font-size: 1.6rem;
+  }
+}
