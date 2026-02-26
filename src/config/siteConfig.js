@@ -1,4 +1,4 @@
-u/**
+/**
  * ============================================================
  *  SITE CONFIGURATION — Single source of truth
  *  Replace all placeholder values with your own information.
