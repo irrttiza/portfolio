@@ -49,6 +49,13 @@ export default function App() {
 
   return (
     <div id="app-wrapper" data-theme={theme}>
+      {/* Gradient background layers — real DOM elements for reliability */}
+      <div className="bg-gradient bg-gradient--light" aria-hidden="true" />
+      <div
+        className={`bg-gradient bg-gradient--dark${theme === "dark" ? " bg-gradient--active" : ""}`}
+        aria-hidden="true"
+      />
+
       {loading && <Loader onFinish={handleLoaderFinish} />}
 
       <Navbar theme={theme} toggleTheme={toggleTheme} />
