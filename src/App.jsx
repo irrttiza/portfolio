@@ -25,6 +25,13 @@ export default function App() {
   });
 
   const toggleTheme = useCallback(() => {
+    // Add transitioning class so every element animates smoothly
+    const wrapper = document.getElementById("app-wrapper");
+    if (wrapper) {
+      wrapper.classList.add("theme-transitioning");
+      setTimeout(() => wrapper.classList.remove("theme-transitioning"), 700);
+    }
+
     setTheme((prev) => {
       const next = prev === "dark" ? "light" : "dark";
       try {
