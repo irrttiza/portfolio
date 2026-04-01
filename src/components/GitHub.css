@@ -2,7 +2,8 @@
    GitHub Section
    ============================================================ */
 .github-section {
-    background: var(--bg);
+    background: transparent;
+    transition: background 0.6s ease;
 }
 
 .github__grid {

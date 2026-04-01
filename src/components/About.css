@@ -2,7 +2,9 @@
    About Section
    ============================================================ */
 .about {
-    background: var(--bg-secondary);
+    background: var(--bg-section-alt);
+    backdrop-filter: blur(2px);
+    transition: background 0.6s ease;
 }
 
 .about__grid {

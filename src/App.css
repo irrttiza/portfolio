@@ -7,7 +7,8 @@
 [data-theme="light"] {
   --bg: #f8f9fc;
   --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
+  --bg-section-alt: rgba(255, 255, 255, 0.45);
+  --bg-card: rgba(255, 255, 255, 0.72);
   --text: #1a1a2e;
   --text-secondary: #555770;
   --accent: #6c63ff;
@@ -27,7 +28,8 @@
 [data-theme="dark"] {
   --bg: #0f0f1a;
   --bg-secondary: #1a1a2e;
-  --bg-card: #1e1e35;
+  --bg-section-alt: rgba(15, 15, 26, 0.5);
+  --bg-card: rgba(30, 30, 53, 0.82);
   --text: #e8e8f0;
   --text-secondary: #a0a0b8;
   --accent: #7c74ff;
@@ -132,6 +134,39 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* Gradient background layers — cross-fade on theme switch */
+#app-wrapper::before,
+#app-wrapper::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+/* Light gradient */
+#app-wrapper::before {
+  background: linear-gradient(135deg, #f8f9fc 0%, #e8e0f7 40%, #d4e4ff 100%);
+  opacity: 1;
+}
+
+/* Dark gradient */
+#app-wrapper::after {
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1035 40%, #0d1f3c 100%);
+  opacity: 0;
+}
+
+/* Swap visibility in dark mode */
+[data-theme="dark"] #app-wrapper::before {
+  opacity: 0;
+}
+
+[data-theme="dark"] #app-wrapper::after {
+  opacity: 1;
 }
 
 #app-wrapper>main {
