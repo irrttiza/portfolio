@@ -43,28 +43,20 @@ const siteConfig = {
     /* ---- Projects ---- */
     projects: [
         {
-            title: "Alpha",
+            title: "Breed Prediction Model",
             description:
-                "A brief description of your project. What it does, why you built it, and what makes it special.",
-            techStack: ["React", "Node.js", "MongoDB"],
-            github: "https://github.com/irrttiza/project-one",
-            live: "https://project-one.example.com",
+                "Designed and implemented an AI model to identify animal breeds from images. Handled dataset preprocessing, augmentation, and labeling, followed by training a deep learning classifier for multi-class prediction. Conducted performance evaluation and optimization to improve generalization and reduce overfitting.",
+            techStack: ["Python", "TensorFlow", "OpenCV", "Numpy", "Pandas"],
+            github: "https://github.com/irrttiza/breed-prediction-model",
+            live: "",
         },
         {
-            title: "Beta",
+            title: "Alzheimer's Disease Risk Prediction",
             description:
-                "A brief description of your second project. Highlight the key features and technologies used.",
-            techStack: ["Python", "Django", "PostgreSQL"],
-            github: "https://github.com/irrttiza/project-two",
-            live: "https://project-two.example.com",
-        },
-        {
-            title: "Gamma",
-            description:
-                "A brief description of your third project. Explain what problem it solves and your approach.",
-            techStack: ["Next.js", "TypeScript", "Firebase"],
-            github: "https://github.com/irrttiza/project-three",
-            live: "https://project-three.example.com",
+                "This project applies a Decision Tree classifier to predict Alzheimer's disease risk using approximately 70,000 patient records. After preprocessing and label encoding, the model is trained and evaluated with standard metrics, offering an interpretable, interactive tool to support early risk assessment in healthcare settings.",
+            techStack: ["Python", "Matplotlib", "Numpy"],
+            github: "https://github.com/irrttiza/alzheimers-prediction",
+            live: "",
         },
     ],
 
