@@ -148,24 +148,21 @@
   transition: opacity 0.6s ease;
 }
 
-/* Light gradient */
+/* Light gradient — sits underneath */
 #app-wrapper::before {
   background: linear-gradient(135deg, #f8f9fc 0%, #e8e0f7 40%, #d4e4ff 100%);
-  opacity: 1;
+  z-index: -2;
 }
 
-/* Dark gradient */
+/* Dark gradient — sits on top, fades in/out */
 #app-wrapper::after {
   background: linear-gradient(135deg, #0f0f1a 0%, #1a1035 40%, #0d1f3c 100%);
+  z-index: -1;
   opacity: 0;
 }
 
-/* Swap visibility in dark mode */
-[data-theme="dark"] #app-wrapper::before {
-  opacity: 0;
-}
-
-[data-theme="dark"] #app-wrapper::after {
+/* In dark mode — dark layer fades to visible */
+#app-wrapper[data-theme="dark"]::after {
   opacity: 1;
 }
 
